@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router";
+import { createHashRouter } from "react-router";
 import { App } from "@pages/app/App";
 import React from "react";
 
@@ -13,7 +13,7 @@ const LandingPageComponent = React.lazy(async () => {
   return { default: module.LandingPage };
 });
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
   {
     path: "/portfolio",
     Component: App,
