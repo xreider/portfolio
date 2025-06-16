@@ -1,15 +1,14 @@
+import Styles from './App.module.scss';
 
 
-function App() {
+export function App() {
 
   return (
-    <>
-      <h1>HIIIIIIIII!</h1>
-    </>
+    <div className={Styles.wrapper}>
+      App
+    </div>
   )
 }
-
-export default App
 
 
 
