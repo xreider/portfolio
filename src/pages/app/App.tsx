@@ -1,3 +1,4 @@
+import { Outlet } from 'react-router';
 import Styles from './App.module.scss';
 
 
@@ -5,7 +6,7 @@ export function App() {
 
   return (
     <div className={Styles.wrapper}>
-      App
+      <Outlet />
     </div>
   )
 }

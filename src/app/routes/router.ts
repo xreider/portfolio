@@ -8,13 +8,24 @@ const RdpProductComponent = React.lazy(async () => {
   return { default: module.RdpProduct };
 });
 
+const LandingPageComponent = React.lazy(async () => {
+  const module = await import('@pages/landing/LandingPage');
+  return { default: module.LandingPage };
+});
+
 export const router = createBrowserRouter([
   {
     path: "/portfolio",
     Component: App,
-  },
-    {
-    path: "/portfolio/rdp",
-    Component: RdpProductComponent,
+    children: [
+      {
+        path: '',
+        Component: LandingPageComponent
+      },
+      {
+        path: "rdp",
+        Component: RdpProductComponent
+      }
+    ]
   },
 ]);
