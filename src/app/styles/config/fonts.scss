@@ -15,8 +15,15 @@ body {
   font-weight: 400;
   --font-opsz: 18; // the supported range [14, 32] for font-family “Inter”.
   --font-weight: 400;
-  font-variation-settings: 'opsz' var(--font-opsz), 'wght' var(--font-weight);
 
   font-optical-sizing: auto;
   font-style: normal;
+}
+
+* {
+  font-variation-settings: 'opsz' var(--font-opsz), 'wght' var(--font-weight);
+}
+
+h1 {
+  --font-weight: 600;
 }
