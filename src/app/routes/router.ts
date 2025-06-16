@@ -15,11 +15,11 @@ const LandingPageComponent = React.lazy(async () => {
 
 export const router = createHashRouter([
   {
-    path: "/portfolio",
+    path: "/",
     Component: App,
     children: [
       {
-        path: '',
+        index: true,
         Component: LandingPageComponent
       },
       {
