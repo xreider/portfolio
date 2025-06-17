@@ -27,7 +27,11 @@
     "baseUrl": ".",
     "paths": {
       "@pages": ["./src/pages"],
-      "@pages/*": ["./src/pages/*"]
+      "@pages/*": ["./src/pages/*"],
+      "@shared": ["./src/shared"],
+      "@shared/*": ["./src/shared/*"],
+      "@routes": ["./src/app/routes"],
+      "@routes/*": ["./src/app/routes/*"]
     }
   },
   "include": ["src"]

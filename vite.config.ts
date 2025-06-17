@@ -22,8 +22,11 @@ export default defineConfig({
   resolve: {
     alias: {
       '@pages': `${path.resolve(__dirname, 'src/pages')}`,
-
       '@pages/*': `${path.resolve(__dirname, 'src/pages/*')}`,
+      '@shared': `${path.resolve(__dirname, 'src/shared')}`,
+      '@shared/*': `${path.resolve(__dirname, 'src/shared/*')}`,
+      '@routes': `${path.resolve(__dirname, 'src/app/routes')}`,
+      '@routes/*': `${path.resolve(__dirname, 'src/app/routes/*')}`,
     },
   },
   css: {

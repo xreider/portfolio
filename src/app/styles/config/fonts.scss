@@ -10,8 +10,8 @@ body {
     'Segoe UI Variable Display', 'Segoe UI', Helvetica, 'Apple Color Emoji',
     Arial, sans-serif, 'Segoe UI Emoji', 'Segoe UI Symbol';
 
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 16px;
+  line-height: 24px;
   font-weight: 400;
   --font-opsz: 18; // the supported range [14, 32] for font-family “Inter”.
   --font-weight: 400;
@@ -20,10 +20,17 @@ body {
   font-style: normal;
 }
 
+.body-lg {
+  font-size: 20px;
+  line-height: 28px;
+}
+
 * {
   font-variation-settings: 'opsz' var(--font-opsz), 'wght' var(--font-weight);
 }
 
 h1 {
-  --font-weight: 600;
+  font-size: 48px;
+  line-height: 2;
+  --font-weight: 700;
 }
