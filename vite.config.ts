@@ -27,6 +27,8 @@ export default defineConfig({
       '@shared/*': `${path.resolve(__dirname, 'src/shared/*')}`,
       '@routes': `${path.resolve(__dirname, 'src/app/routes')}`,
       '@routes/*': `${path.resolve(__dirname, 'src/app/routes/*')}`,
+      '@src': `${path.resolve(__dirname, 'src')}`,
+      '@src/*': `${path.resolve(__dirname, 'src/*')}`,
     },
   },
   css: {

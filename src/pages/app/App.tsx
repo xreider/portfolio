@@ -1,13 +1,16 @@
 import { Outlet } from 'react-router';
 import Styles from './App.module.scss';
+import { HiddenModeProvider } from '@src/app/config/contexts/HiddenModeContext';
 
 
 export function App() {
 
   return (
-    <div className={Styles.wrapper}>
-      <Outlet />
-    </div>
+    <HiddenModeProvider isHiddenMode={true}>
+      <div className={Styles.wrapper}>
+        <Outlet />
+      </div>
+    </HiddenModeProvider>
   )
 }
 

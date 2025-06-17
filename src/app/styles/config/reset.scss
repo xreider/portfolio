@@ -223,6 +223,10 @@ main {
   display: block;
 }
 
+em {
+  font-style: normal; /* Убирает курсивное начертание */
+}
+
 // h1 {
 //   font-size: 2em;
 //   margin: 0.67em 0;
