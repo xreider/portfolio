@@ -1,7 +1,7 @@
 // Тип для результата вычисления опыта
 interface Experience {
   years: number;
-  months: number;
+  months?: number;
 }
 
 /**
@@ -42,13 +42,10 @@ export function getExperience(fromDate: string): Experience {
 /**
  * Форматирует число лет и месяцев в строку с правильными окончаниями
  */
-export function formatExperience(experience: Experience): string {
+export function formatExperience(experience: Experience, showMonths: boolean = true): string {
   const { years, months } = experience;
-  return `${years} ${pluralize(years, ['год', 'года', 'лет'])} ${months} ${pluralize(months, [
-    'месяц',
-    'месяца',
-    'месяцев',
-  ])}`;
+  const monthsStr = showMonths ? ` ${months} ${pluralize(months!, ['месяц', 'месяца', 'месяцев'])}` : '';
+  return `${years} ${pluralize(years, ['год', 'года', 'лет'])}${monthsStr}`;
 }
 
 /**

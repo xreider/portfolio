@@ -1,0 +1,16 @@
+/* Общие стили для контейнера иконки */
+.icon {
+  display: inline-flex; // Для лучшего выравнивания с текстом
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0; // Предотвращаем сжимание иконки
+
+  svg {
+    width: 18px;
+    height: 18px;
+    // Поскольку цвет задан в самом SVG, здесь нам не нужно указывать stroke/fill
+    // Если вам нужно изменить их позже, это будет сложнее без currentColor.
+  }
+}

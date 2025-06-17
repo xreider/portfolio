@@ -11,7 +11,7 @@ body {
     Arial, sans-serif, 'Segoe UI Emoji', 'Segoe UI Symbol';
 
   font-size: 15px;
-  line-height: 20px;
+  line-height: 22px;
   font-weight: 400;
   --font-opsz: 18; // the supported range [14, 32] for font-family “Inter”.
   --font-weight: 400;
@@ -41,11 +41,29 @@ h3 {
   --font-weight: 700;
 }
 
+h4 {
+  font-size: 16px;
+  line-height: 24px;
+  --font-weight: 700;
+}
+
 .muted {
   color: var(--color_text-muted);
 
   em {
-    --font-weight: 600;
     color: var(--color_text-access_default);
   }
+}
+
+em {
+  --font-weight: 600;
+}
+
+a {
+  --font-weight: 600;
+}
+
+ul li {
+  list-style-type: disc;
+  margin-left: 28px;
 }
