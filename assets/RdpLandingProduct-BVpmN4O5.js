@@ -1,0 +1,1 @@
+import{j as r}from"./index-B0qgQL1o.js";const p="src-pages-product-rdp-RdpLandingProduct-module_wrapper__l9C5E",d={wrapper:p},e=()=>r.jsx("div",{className:d.wrapper,children:"RdpLandingProduct"});export{e as RdpLandingProduct};
