@@ -2,13 +2,13 @@
 .link {
   text-decoration: none; // Remove default underline
   cursor: pointer;
-  transition: color 0.2s ease-in-out, text-decoration 0.2s ease-in-out;
+  transition: color 50ms ease-in-out, text-decoration 50ms ease-in-out;
   text-decoration: underline;
 
   color: var(--color_text-access_default);
 
   &:focus {
-    outline: 2px solid var(--color_text-access_high); // Simple focus indicator
+    outline: 2px solid var(--color_text-access_high--enabled); // Simple focus indicator
     outline-offset: 2px;
   }
 }
@@ -16,12 +16,12 @@
 // Accent styles
 .accent_default {
   &:hover {
-    color: var(--color_text-access_high); // Default blue for links
+    color: var(--color_text-access_high--enabled); // Default blue for links
   }
 }
 
 .accent_high {
-  color: var(--color_text-access_high); // Default blue for links
+  color: var(--color_text-access_high--enabled); // Default blue for links
   font-weight: bold;
 
   &:hover {
@@ -29,6 +29,6 @@
   }
 
   &:focus {
-    outline: 2px solid var(--color_text-access_high); // Simple focus indicator
+    outline: 2px solid var(--color_text-access_high--enabled); // Simple focus indicator
   }
 }

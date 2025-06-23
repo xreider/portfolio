@@ -1,0 +1,20 @@
+@use '@includes/index.scss' as *;
+
+.wrapper {
+  // display: flex;
+  @include media-s-breakpoint-and-down {
+    // flex-direction: column;
+    padding-bottom: 8px;
+  }
+}
+
+.heading {
+  // min-width: 180px;
+  display: inline;
+  --font-weight: 600;
+  &::after {
+    content: ':';
+    margin-left: -4px;
+    margin-right: 8px;
+  }
+}

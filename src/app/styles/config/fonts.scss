@@ -1,3 +1,5 @@
+@use '@includes/index.scss' as *;
+
 @font-face {
   font-family: 'Inter';
   src: url('/fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype');
@@ -23,6 +25,10 @@ body {
 .body-lg {
   font-size: 20px;
   line-height: 28px;
+  @include media-s-breakpoint-and-down {
+    font-size: 18px;
+    line-height: 26px;
+  }
 }
 
 * {
@@ -31,13 +37,18 @@ body {
 
 h1 {
   font-size: 44px;
-  line-height: 64px;
+  line-height: 48px;
   --font-weight: 700;
+
+  @include media-s-breakpoint-and-down {
+    font-size: 38px;
+    line-height: 42px;
+  }
 }
 
 h2 {
   font-size: 32px;
-  line-height: 40px;
+  line-height: 36px;
   --font-weight: 700;
 }
 
@@ -48,8 +59,14 @@ h3 {
 }
 
 h4 {
-  font-size: 16px;
+  font-size: 17px;
   line-height: 24px;
+  --font-weight: 700;
+}
+
+h5 {
+  font-size: 14px;
+  line-height: 20px;
   --font-weight: 700;
 }
 
@@ -71,5 +88,5 @@ a {
 
 ul li {
   list-style-type: disc;
-  margin-left: 28px;
+  margin-left: 14px;
 }

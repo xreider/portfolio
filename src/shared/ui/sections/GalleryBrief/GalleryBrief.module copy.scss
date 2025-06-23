@@ -1,0 +1,121 @@
+.galleryBrief {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 800px; // Пример максимальной ширины
+  margin: 0 auto;
+  user-select: none;
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+
+.mainImageContainer {
+  position: relative;
+  width: 100%;
+  padding-top: 66.66%; // Aspect ratio 3:2. Adjust as needed.
+  overflow: hidden;
+  cursor: grab;
+  margin-bottom: 15px;
+
+  &:active {
+    cursor: grabbing;
+  }
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  will-change: transform;
+}
+
+.sliderWrapper {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0; // Предотвращает сжатие изображения
+  border-radius: 8px;
+  position: relative;
+}
+
+.sliderBg {
+  position: absolute;
+  inset: 0;
+  background-image: url(images/landing/uip1.jpeg);
+  background-position: center;
+  background-size: contain;
+  filter: blur(20px);
+  z-index: -1;
+}
+
+.mainImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; // Гарантирует, что изображение заполняет контейнер
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em; // Размер символа
+  color: white; // Цвет символа
+}
+
+.arrowCircle {
+  background-color: rgba(0, 0, 0, 0.5); // Черный круг с прозрачностью
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+}
+
+.arrowLeft {
+  left: 10px;
+}
+
+.arrowRight {
+  right: 10px;
+}
+
+.thumbnails {
+  display: flex;
+  gap: 10px; // Расстояние между миниатюрами
+  flex-wrap: wrap; // Для переноса миниатюр на новую строку, если их много
+}
+
+.thumbnail {
+  width: 80px; // Размер миниатюры
+  height: 60px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+  border-radius: 4px; // Слегка закругленные углы
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &.active {
+    border-color: #007bff; // Цвет подсветки активной миниатюры
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); // Небольшая тень для активной
+  }
+}

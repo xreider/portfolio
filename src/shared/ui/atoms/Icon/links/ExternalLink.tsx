@@ -1,9 +1,8 @@
 import React, { type FC, type AnchorHTMLAttributes } from 'react';
 import styles from './Link.module.scss';
 import classNames from 'classnames';
+import type { LinkAccent } from './links.types';
 
-// Тип для свойства accent
-export type LinkAccent = 'default' | 'high';
 
 interface ExternalLinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   href: string; // Обязательный href

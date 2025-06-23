@@ -1,4 +1,4 @@
-export { routeMap } from "./routeMap";
+export { routeImportMap } from "./utils";
 
 export { router } from "./router";
 

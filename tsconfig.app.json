@@ -33,7 +33,9 @@
       "@routes": ["./src/app/routes"],
       "@routes/*": ["./src/app/routes/*"],
       "@src": ["./src"],
-      "@src/*": ["./src/*"]
+      "@src/*": ["./src/*"],
+      "@includes": ["./src/app/styles/shared/includes"],
+      "@includes/*": ["./src/app/styles/shared/includes/*"]
     }
   },
   "include": ["src"]

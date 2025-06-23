@@ -1,0 +1,54 @@
+.gallery-brief-thumbs {
+  &__slide {
+    flex: 0 0 22%;
+    min-width: 0;
+    padding-left: var(--thumbs-slide-spacing);
+
+    border-radius: 8px;
+    overflow: hidden;
+    @media (min-width: 576px) {
+      flex: 0 0 15%;
+    }
+
+    &--selected {
+      .gallery-brief-thumbs__slide__button {
+        border-radius: 8px;
+        img {
+          border-radius: 8px;
+        }
+        border: 0.2rem solid var(--color_text-access_high--enabled); // Highlight selected thumb
+      }
+    }
+    &__button {
+      -webkit-tap-highlight-color: rgba(
+        var(--text-high-contrast-rgb-value),
+        0.5
+      );
+      -webkit-appearance: none;
+      appearance: none;
+      background-color: transparent;
+      touch-action: manipulation;
+      display: inline-flex;
+      text-decoration: none;
+      cursor: pointer;
+      border: 0.2rem solid var(--detail-medium-contrast); // Changed from box-shadow to border
+      padding: 0;
+      margin: 0;
+      color: var(--detail-high-contrast);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: var(--thumbs-slide-height);
+      width: 100%;
+      border-radius: 8px;
+      overflow: hidden; // Ensure image stays within bounds
+    }
+
+    &__img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; // Cover the button area
+    }
+  }
+}

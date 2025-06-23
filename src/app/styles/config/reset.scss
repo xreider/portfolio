@@ -22,8 +22,6 @@ html,
 body,
 #root {
   overflow-x: hidden;
-  height: 100vh;
-  height: 100dvh;
 }
 
 a {
@@ -171,10 +169,10 @@ section {
 /* body {
   line-height: 1;
 } */
-ol,
-ul {
-  list-style: none;
-}
+// ol,
+// ul {
+//   list-style: none;
+// }
 
 blockquote,
 q {
